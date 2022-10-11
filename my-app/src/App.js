@@ -1,92 +1,20 @@
 import './App.css';
+import { Mensagem, Click } from './utils'
 
 function App() {
 
-// Listagem com 4 objetos, cada objeto contendo 3 itens diversos e um item boolean, sendo dois boolean true e outros dois false. Só será exibido o objeto que possue a condição false.
+  // Criar uma função externa que chame o número digitado no input no console log acrescentando a mensagem --é muito louco--
+  // Passar duas variáveis para uma segunda função onde elas retornem dentro de um alert depois do click
 
-// Outra lista que tenha 3 objetos com 3 strings, e que só será retornado dois itens que a string seja abacaxi
-
-
-  const listaNomes = [
-    {
-      nome: "mateus",
-      email: "exemplo1@gmail.com",
-      estadoCivil: "solteiro",
-      exibir: true
-    },
-    {
-      nome: "murilo",
-      email: "exemplo2@gmail.com",
-      estadoCivil: "solteiro",
-      exibir: true
-    },
-    {
-      nome: "maria",
-      email: "exemplo3@gmail.com",
-      estadoCivil: "solteiro",
-      exibir: false
-    },
-    {
-      nome: "josé",
-      email: "exemplo4@gmail.com",
-      estadoCivil: "solteiro",
-      exibir: false
-    }
-  ]
-
-  const filterListaNomes = listaNomes.filter(itemLista =>{
-    return itemLista.exibir === false
-  })
-
-  const listaFrutas = [
-    {
-      fruta_1: "melancia",
-      fruta_2: "banana",
-      fruta_3: "abacaxi"
-    },
-    {
-      fruta_1: "laranja",
-      fruta_2: "maçã",
-      fruta_3: "mamão"
-    },
-    {
-      fruta_1: "uva",
-      fruta_2: "limão",
-      fruta_3: "abacaxi"
-    }
-  ]
-
-  const filterListaFrutas = listaFrutas.filter(itemLista =>{
-    return itemLista.fruta_3 === 'abacaxi'
-  })
-
-  console.log(filterListaNomes, 'filtrando nomes')
-  console.log(filterListaFrutas, 'filtrando frutas')
+  const parte1 = 'Jesus é bom '
+  const parte2 = 'e o diabo é vacilão'
 
   return (
     <div className="App">
-    {
-      filterListaNomes.map(itemLista=>{
-        return(
-          <div className='div-itens-list'>
-            <p>{itemLista.nome}</p>
-            <p>{itemLista.email}</p>
-            <p>{itemLista.estadoCivil}</p>
-          </div>
-        )
-      })
-    }
-    {
-      filterListaFrutas.map(itemLista=>{
-        return (
-          <div className='div-itens-list'>
-            <p>{itemLista.fruta_1}</p>
-            <p>{itemLista.fruta_2}</p>
-            <p>{itemLista.fruta_3}</p>
-          </div>
-        )
-      })
-    }
+      <form>
+        <input onChange={(e) => { Mensagem(e.target.value + ' é muito louco') }} />
+        <button onClick={(e) => { Click(parte1 + parte2) }}>Clique para receber</button>
+      </form>
     </div>
   );
 }
