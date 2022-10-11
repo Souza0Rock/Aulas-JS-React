@@ -12,32 +12,32 @@ function App() {
         nome_do_pai: 'Fernando'
     },
     {
-      nome: 'Mateus',
-      idade: 18,
-      data_de_nascimento: '15/04/2004',
-      nome_da_mãe: 'Patricia',
-      nome_do_pai: 'Fernando'
+      nome: 'José',
+      idade: 24,
+      data_de_nascimento: '01/05/1998',
+      nome_da_mãe: 'Neide',
+      nome_do_pai: 'João'
     },
     {
-      nome: 'Mateus',
-      idade: 18,
-      data_de_nascimento: '15/04/2004',
-      nome_da_mãe: 'Patricia',
-      nome_do_pai: 'Fernando'
+      nome: 'Maria',
+      idade: 22,
+      data_de_nascimento: '28/10/2000',
+      nome_da_mãe: 'Alessandra',
+      nome_do_pai: 'Cleber'
     },
     {
-      nome: 'Mateus',
-      idade: 18,
-      data_de_nascimento: '15/04/2004',
-      nome_da_mãe: 'Patricia',
-      nome_do_pai: 'Fernando'
+      nome: 'Pedro',
+      idade: 30,
+      data_de_nascimento: '01/12/1992',
+      nome_da_mãe: 'Joana',
+      nome_do_pai: ''
     },
     {
-      nome: 'Mateus',
-      idade: 18,
-      data_de_nascimento: '15/04/2004',
+      nome: 'Jéssica',
+      idade: 24,
+      data_de_nascimento: '15/04/1994',
       nome_da_mãe: 'Patricia',
-      nome_do_pai: 'Fernando'
+      nome_do_pai: ''
     },
 ]
 

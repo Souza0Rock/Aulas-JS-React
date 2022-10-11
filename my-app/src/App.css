@@ -3,6 +3,11 @@
   justify-content: space-around;
 }
 
+section ul {
+  margin: 0;
+  padding: 0;
+}
+
 li {
   list-style: none;
 }
@@ -10,5 +15,9 @@ li {
 li ul {
   width: fit-content;
   padding: 10px;
-  border: solid 2px black;
+  border: solid 2px #000;
+}
+
+.div-h2 {
+  text-transform: capitalize;
 }
