@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <div className='div-cards'>
         <p>{verbo} {preposicao} a praia</p>
-        <button onClick={() => AlterarString()}>teste</button>
+        <button onClick={() => AlterarString()}>clique aqui</button>
       </div>
       <div className='div-cards'>
         <p>{number} x 4</p>
