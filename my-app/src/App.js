@@ -1,92 +1,21 @@
 import './App.css';
 
 function App() {
+  
+  // Fazer um input com onChange afim de o que for digitado será somado com uma variável de valor 4, e o resultado será retornado como um alert.
+  // Fazer um click numa div com texto qualquer que retorne um alert com a string 'você conseguiu' de uma variável.
 
-// Listagem com 4 objetos, cada objeto contendo 3 itens diversos e um item boolean, sendo dois boolean true e outros dois false. Só será exibido o objeto que possue a condição false.
-
-// Outra lista que tenha 3 objetos com 3 strings, e que só será retornado dois itens que a string seja abacaxi
-
-
-  const listaNomes = [
-    {
-      nome: "mateus",
-      email: "exemplo1@gmail.com",
-      estadoCivil: "solteiro",
-      exibir: true
-    },
-    {
-      nome: "murilo",
-      email: "exemplo2@gmail.com",
-      estadoCivil: "solteiro",
-      exibir: true
-    },
-    {
-      nome: "maria",
-      email: "exemplo3@gmail.com",
-      estadoCivil: "solteiro",
-      exibir: false
-    },
-    {
-      nome: "josé",
-      email: "exemplo4@gmail.com",
-      estadoCivil: "solteiro",
-      exibir: false
-    }
-  ]
-
-  const filterListaNomes = listaNomes.filter(itemLista =>{
-    return itemLista.exibir === false
-  })
-
-  const listaFrutas = [
-    {
-      fruta_1: "melancia",
-      fruta_2: "banana",
-      fruta_3: "abacaxi"
-    },
-    {
-      fruta_1: "laranja",
-      fruta_2: "maçã",
-      fruta_3: "mamão"
-    },
-    {
-      fruta_1: "uva",
-      fruta_2: "limão",
-      fruta_3: "abacaxi"
-    }
-  ]
-
-  const filterListaFrutas = listaFrutas.filter(itemLista =>{
-    return itemLista.fruta_3 === 'abacaxi'
-  })
-
-  console.log(filterListaNomes, 'filtrando nomes')
-  console.log(filterListaFrutas, 'filtrando frutas')
+  const valorSoma = 4
+  const mensagemAlert = 'Você conseguiu!'
 
   return (
     <div className="App">
-    {
-      filterListaNomes.map(itemLista=>{
-        return(
-          <div className='div-itens-list'>
-            <p>{itemLista.nome}</p>
-            <p>{itemLista.email}</p>
-            <p>{itemLista.estadoCivil}</p>
-          </div>
-        )
-      })
-    }
-    {
-      filterListaFrutas.map(itemLista=>{
-        return (
-          <div className='div-itens-list'>
-            <p>{itemLista.fruta_1}</p>
-            <p>{itemLista.fruta_2}</p>
-            <p>{itemLista.fruta_3}</p>
-          </div>
-        )
-      })
-    }
+      <form>
+        <input onChange={(e) => { alert(JSON.parse(e.target.value) + valorSoma ) }} />
+      </form>
+      <div>
+        <p onClick={() => {alert(mensagemAlert)}}>Clique aqui!</p>
+      </div>
     </div>
   );
 }
