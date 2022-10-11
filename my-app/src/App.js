@@ -2,97 +2,91 @@ import './App.css';
 
 function App() {
 
-  //MAP SEMPRE USADO PARA TRAZER DADOS DE UM ARRAY [] (NUNCA DE UM OBJETO)
-  const pessoas = [
-    {
-        nome: 'Mateus',
-        idade: 18,
-        data_de_nascimento: '15/04/2004',
-        nome_da_mãe: 'Patricia',
-        nome_do_pai: 'Fernando'
-    },
-    {
-      nome: 'Mateus',
-      idade: 18,
-      data_de_nascimento: '15/04/2004',
-      nome_da_mãe: 'Patricia',
-      nome_do_pai: 'Fernando'
-    },
-    {
-      nome: 'Mateus',
-      idade: 18,
-      data_de_nascimento: '15/04/2004',
-      nome_da_mãe: 'Patricia',
-      nome_do_pai: 'Fernando'
-    },
-    {
-      nome: 'Mateus',
-      idade: 18,
-      data_de_nascimento: '15/04/2004',
-      nome_da_mãe: 'Patricia',
-      nome_do_pai: 'Fernando'
-    },
-    {
-      nome: 'Mateus',
-      idade: 18,
-      data_de_nascimento: '15/04/2004',
-      nome_da_mãe: 'Patricia',
-      nome_do_pai: 'Fernando'
-    },
-]
+// Listagem com 4 objetos, cada objeto contendo 3 itens diversos e um item boolean, sendo dois boolean true e outros dois false. Só será exibido o objeto que possue a condição false.
+
+// Outra lista que tenha 3 objetos com 3 strings, e que só será retornado dois itens que a string seja abacaxi
 
 
-// fazer uma lista com 5 pessoas com nome, idade, data de nascimento ne nome da mãe. 3 pessoas terão o nome do pai, mas as duas que não tiverem não será exibido o título de pai.
+  const listaNomes = [
+    {
+      nome: "mateus",
+      email: "exemplo1@gmail.com",
+      estadoCivil: "solteiro",
+      exibir: true
+    },
+    {
+      nome: "murilo",
+      email: "exemplo2@gmail.com",
+      estadoCivil: "solteiro",
+      exibir: true
+    },
+    {
+      nome: "maria",
+      email: "exemplo3@gmail.com",
+      estadoCivil: "solteiro",
+      exibir: false
+    },
+    {
+      nome: "josé",
+      email: "exemplo4@gmail.com",
+      estadoCivil: "solteiro",
+      exibir: false
+    }
+  ]
+
+  const filterListaNomes = listaNomes.filter(itemLista =>{
+    return itemLista.exibir === false
+  })
+
+  const listaFrutas = [
+    {
+      fruta_1: "melancia",
+      fruta_2: "banana",
+      fruta_3: "abacaxi"
+    },
+    {
+      fruta_1: "laranja",
+      fruta_2: "maçã",
+      fruta_3: "mamão"
+    },
+    {
+      fruta_1: "uva",
+      fruta_2: "limão",
+      fruta_3: "abacaxi"
+    }
+  ]
+
+  const filterListaFrutas = listaFrutas.filter(itemLista =>{
+    return itemLista.fruta_3 === 'abacaxi'
+  })
+
+  console.log(filterListaNomes, 'filtrando nomes')
+  console.log(filterListaFrutas, 'filtrando frutas')
 
   return (
     <div className="App">
-      {
-        pessoas.map(item => {
-
-          return (
-            <section className='box'>
-              <ul>
-                <li>
-                  <div className='container'>
-                    <ul>  
-                      <li>
-                        <div className='container'>
-                          <div className='div-h2'><h2>nome:</h2></div>
-                          <div className='div-p'><p>{item.nome}</p></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div className='container'>
-                          <div className='div-h2'><h2>idade:</h2></div>
-                          <div className='div-p'><p>{item.idade}</p></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div className='container'>
-                          <div className='div-h2'><h2>data de nascimento:</h2></div>
-                          <div className='div-p'><p>{item.data_de_nascimento}</p></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div className='container'>
-                          <div className='div-h2'><h2>nome da mãe:</h2></div>
-                          <div className='div-p'><p>{item.nome_da_mãe}</p></div>
-                        </div>
-                      </li>
-                      {item.nome_do_pai ? <li>
-                        <div className='container'>
-                          <div className='div-h2'><h2>nome do pai:</h2></div>
-                          <div className='div-p'><p>{item.nome_do_pai}</p></div>
-                        </div>
-                      </li>: ''}
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </section>
-          )
-        })
-      }
+    {
+      filterListaNomes.map(itemLista=>{
+        return(
+          <div className='div-itens-list'>
+            <p>{itemLista.nome}</p>
+            <p>{itemLista.email}</p>
+            <p>{itemLista.estadoCivil}</p>
+          </div>
+        )
+      })
+    }
+    {
+      filterListaFrutas.map(itemLista=>{
+        return (
+          <div className='div-itens-list'>
+            <p>{itemLista.fruta_1}</p>
+            <p>{itemLista.fruta_2}</p>
+            <p>{itemLista.fruta_3}</p>
+          </div>
+        )
+      })
+    }
     </div>
   );
 }
