@@ -1,19 +1,30 @@
 import './App.css';
-import { Mensagem, Click } from './utils'
+import { Instrumentos, PaisesFabricantesCarro } from './utils'
 
 function App() {
 
-  // Criar uma função externa que chame o número digitado no input no console log acrescentando a mensagem --é muito louco--
-  // Passar duas variáveis para uma segunda função onde elas retornem dentro de um alert depois do click
 
-  const parte1 = 'Jesus é bom '
-  const parte2 = 'e o diabo é vacilão'
+// Fazer uma condição que se o valor digitado num input for: 
+  //--Guitarra--, console retorna --tem cordas;
+  //--Bateria--, console retorna --tem pedal;
+  //--Microfone--, console retorna --tem fios;
+  // Qualque outra coisa, retorna --não existe esse intrumentos;
+
+// Fazer um console com switch case que faça algo com 3 opções, e quando não atender uma das opções tenha um retorno no console.
+
+
 
   return (
     <div className="App">
       <form>
-        <input onChange={(e) => { Mensagem(e.target.value + ' é muito louco') }} />
-        <button onClick={(e) => { Click(parte1 + parte2) }}>Clique para receber</button>
+        <div>
+          <div><h2>If Else</h2></div>
+          <input onChange={(e) => {Instrumentos(e.target.value) }} />
+        </div>
+        <div>
+          <div><h2>Switch Case</h2></div>
+          <input onChange={(e) => {PaisesFabricantesCarro(e.target.value) }} />
+        </div>
       </form>
     </div>
   );
