@@ -1,0 +1,30 @@
+useEffect (() => {
+    if (splitPlatform === 'Playstation') {
+        setPlatform (
+            <div className='card1'>
+                <img alt='lsala' src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gratispng.com%2Fpng-6lyql9%2F&psig=AOvVaw3I_5t7IGzg6WAKQiXst7o8&ust=1665691416951000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOCzuJm-2_oCFQAAAAAdAAAAABAQ' />
+            </div>                
+        )
+    }
+
+    else if (splitPlatform === 'Xbox') {
+        setPlatform (
+            <div className='card2'>
+                <img alt='teste' src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.m.wikipedia.org%2Fwiki%2FFicheiro%3AXbox_logo_(2019).svg&psig=AOvVaw1osDoh0mjLELHusxoW1Tq5&ust=1665692965142000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJCb3_vD2_oCFQAAAAAdAAAAABAE' />
+            </div>
+        )
+    }
+
+    else if (splitPlatform === 'Nintendo') {
+        setPlatform(
+            <div className='card3'>
+                <img alt='teste' src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Fbr%2Ficone-gratis%2Fnintendo_871380&psig=AOvVaw0VojvUpmR3nd6f3fDgx6t0&ust=1665693039453000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCIi3oaTE2_oCFQAAAAAdAAAAABAE' />
+            </div>
+        )
+    }
+
+    else {
+        setPlatform(<p>Valor desconhecido</p>)
+    }
+
+}, [])
