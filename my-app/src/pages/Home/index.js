@@ -15,7 +15,7 @@ function Home() {
                     </li>
                     <li>
                         <Links 
-                            texto={"Clique para querry"}
+                            texto={"Clique para Querry"}
                             link={"/guitars?urlParams=grestch"}
                         />
                     </li>

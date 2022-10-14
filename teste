@@ -28,3 +28,13 @@ useEffect (() => {
     }
 
 }, [])
+
+<div>
+    <div>
+        {urlParams.gretsch === "gretsch" && <img alt="Gretsch" href={gretschLink} />}
+        {urlParams.aslan === "aslan" && <img alt="Aslan" href={aslanLink} />}
+        {urlParams.fender === "fender" && <img alt="Fender" href={fenderLink} />}
+        {urlParams.gibson === "gibson" && <img alt="Gibson" href={gibsonLink} />}
+        {urlParams.duesenberg === "duesenberg" && <img alt="Duesenberg" href={duesenbergLink} />}
+    </div>
+</div>
