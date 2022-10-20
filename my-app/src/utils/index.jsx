@@ -19,6 +19,6 @@ export const PaisesFabricantesCarro = (paisDigitado) => {
         case "França": console.log('Renault, Pegeout e Citroen');   break;
         case "Estados Unidos":  console.log('Chevrolet, Dodge e Cadillac');   break;
         default:
-            console.log('Não foi encontrada fabricantes nessa nacionalidade')
+            console.log('Não foi encontrado fabricantes nessa nacionalidade')
     }
 }
